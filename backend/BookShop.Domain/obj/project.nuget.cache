@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sNuWYvqKLop4+G5daVmnXidfJpUrek8XeF3Zq5yrCKaSn1n2RXL98QipmDPs4QkZrG5SfwEyJHsc8mVJ23ZQZA==",
+  "dgSpecHash": "n6PRelmI5UKd/cakJ0Ho280uQT6Rt6teQ/3Zh19bxCHhTVSRxDKKoe+DQ55X9NzsNE5rt6fE+3OG36X6o0y4MA==",
   "success": true,
-  "projectFilePath": "D:\\GGIT\\AMDARIS\\PROJECT\\BookShop.Domain\\BookShop.Domain.csproj",
+  "projectFilePath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tania\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tania\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

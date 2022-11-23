@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BookShop.Services
 {
-    internal class BookService : IBookService
+    public class BookService : IBookService
     {
 
         private readonly IRepository<Book> _bookRepository;
@@ -29,8 +29,12 @@ namespace BookShop.Services
             {
                 Isbn = createBookDto.Isbn,
                 Title = createBookDto.Title,
-                Author = createBookDto.Author,
-                Genre = createBookDto.Genre,
+                AuthorId = (int)createBookDto.AuthorId,
+                GenreId = (int)createBookDto.GenreId,
+                LanguageId = (int)createBookDto.LanguageId,
+                ReleaseDate = (DateOnly)createBookDto.ReleaseDate,
+                Price = createBookDto.Price,
+                AvailabilityId = createBookDto.Available,
             };
 
             _bookRepository.Add(book);
@@ -94,24 +98,24 @@ namespace BookShop.Services
             {
                 throw new Exception("Employee not found!");
 
-                // We can also use PUT to create a new resource, but it also will require explicit identity insert in our case
-                /* employee = new Employee();
-                employee.Id = id;
-                _employeeRepository.Add(employee);*/
             }
             else if (dto.Isbn != book.Isbn && CheckIfIdnpExists(dto.Isbn))
                 return null;
 
             book.Isbn = dto.Isbn;
             book.Title = dto.Title;
-            book.Author = dto.Author;
+            book.AuthorId = (int)dto.AuthorId;
+            book.GenreId = (int)dto.GenreId;
+            book.LanguageId = (int)dto.LanguageId;
+            book.ReleaseDate = (DateOnly)dto.ReleaseDate;
             book.Price = dto.Price;
+            book.AvailabilityId = dto.Available;
 
             _bookRepository.Save();
             return book;
         }
 
-        public Book UpdateEmployeeDetails(int id, UpdateBookDto dto)
+        public Book UpdateBookDetails(int id, UpdateBookDto dto)
         {
             var book = _bookRepository.Find(id);
             if (book == null)
@@ -120,28 +124,28 @@ namespace BookShop.Services
             if (!string.IsNullOrWhiteSpace(dto.Title))
                 book.Title = dto.Title;
 
-            if (!string.IsNullOrWhiteSpace(dto.Author))
-                book.Author = dto.Author;
+            if (dto.AuthorId>0)
+                book.AuthorId = dto.AuthorId;
 
-            if (dto.Isbn.HasValue && book.Isbn != dto.Isbn.Value)
+            if ( book.Isbn != dto.Isbn)
             {
-                if (CheckIfIdnpExists(dto.Isbn.Value))
+                if (CheckIfIdnpExists(dto.Isbn))
                 {
                     throw new Exception("Another user with such IDNP already exists in the system!");
                 }
-                book.Isbn = dto.Isbn.Value;
+                book.Isbn = dto.Isbn;
             }
 
-            if (dto.Price.HasValue)
+            if (dto.Price >0)
             {
-                book.Price = dto.Price.Value;
+                book.Price = dto.Price;
             }
 
             _bookRepository.Save();
             return book;
         }
 
-        private bool CheckIfIdnpExists(long isbn)
+        private bool CheckIfIdnpExist(string isbn)
         {
             return _bookRepository.Find(x => x.Isbn == isbn) != null;
         }

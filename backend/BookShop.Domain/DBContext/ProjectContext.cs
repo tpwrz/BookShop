@@ -16,7 +16,7 @@ namespace BookShop.Domain.Models
         public virtual DbSet<Author> Authors { get; set; } = null!;
         public virtual DbSet<AuthorsView> AuthorsViews { get; set; } = null!;
         public virtual DbSet<Availability> AvailabilityRefs { get; set; } = null!;
-        public virtual DbSet<Book> Books { get; set; } = null!;
+        public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<BooksOrder> BooksOrders { get; set; } = null!;
         public virtual DbSet<BooksOrdersUsersView> BooksOrdersUsersViews { get; set; } = null!;
         public virtual DbSet<BooksView> BooksViews { get; set; } = null!;

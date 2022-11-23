@@ -13,8 +13,8 @@ namespace BookShop.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Currency> entity)
         {
-            entity.HasKey(e => e.CurrencyId)
-                    .HasName("PK__Currency__14470AF0421D2CB1");
+            //entity.HasKey(e => e.CurrencyId)
+            //        .HasName("PK__Currency__14470AF0421D2CB1");
 
             entity.ToTable("CurrencyRef");
 

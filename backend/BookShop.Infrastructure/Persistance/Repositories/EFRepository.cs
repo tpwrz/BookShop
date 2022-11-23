@@ -14,10 +14,10 @@ namespace BookShop.Infrastructure.Persistance.Repositories
    public
         class EFRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        DbContext _context;
+        ProjectContext _context;
         DbSet<TEntity> _dbSet;
 
-        public EFRepository(DbContext context)
+        public EFRepository(ProjectContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
@@ -60,6 +60,16 @@ namespace BookShop.Infrastructure.Persistance.Repositories
         public TEntity Update(TEntity entity)
         {
             return _dbSet.Update(entity).Entity;
+        }
+
+        private IQueryable<TEntity> IncludeProperties<TEntity>(params Expression<Func<TEntity, object>>[] includeProperties) where TEntity : BaseEntity
+        {
+            IQueryable<TEntity> entities = _context.Set<TEntity>();
+            foreach (var includeProperty in includeProperties)
+            {
+                entities = entities.Include(includeProperty);
+            }
+            return entities;
         }
     }
 }

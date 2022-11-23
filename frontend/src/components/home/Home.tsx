@@ -12,36 +12,19 @@ import { ThemeProvider } from '@mui/material/styles';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import theme from '../reusable/Theme';
-import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
-import { constructor, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
+import useFetch from '../UseFetch';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = useFetch();
 
-class Home extends React.Component {
-
- 
-  componentDidMount() {
-    axios.get('http://res.cloudinary.com/christekh/image/list/xmas.json')
-      .then(res => {
-        console.log(res.data.resources);
-        this.setState({ gallery: res.data.resources });
-      });
+function Home(){
+  
+  const [favourite, setState] = useState(false);
+  const setIcon = (id: number) => {
+    setState(favourite => !favourite);
+    console.log(favourite);
   }
-
-  render() {
-    const [favourite, setState] = useState(false);
-    const setIcon = (id: number) => {
-      this.setState(favourite => !favourite);
-      console.log(favourite);
-    }
-
-    constructor() {
-      this.state = {
-        gallery: []
-      }
-    }
-
    
     return (
       <ThemeProvider theme={theme}>
@@ -53,32 +36,6 @@ class Home extends React.Component {
                 <Grid item key={card} xs={10} sm={6} md={4} lg={3}>
                   <Card
                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                   
-                   <CloudinaryContext cloudName="christekh">
-                        {
-                            this.state.gallery.map((data: { public_id: React.Key | null | undefined; created_at: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
-                                return (
-                                    <div className="responsive" key={data.public_id}>
-                                        <div className="img">
-                                            <a target="_blank" href={`http://res.cloudinary.com/christekh/image/upload/${data.public_id}.jpg`}>
-                                                <Image publicId={data.public_id}>
-                                                    <Transformation
-                                                        crop="scale"
-                                                        width="300"
-                                                        height="200"
-                                                        dpr="auto"
-                                                        responsive_placeholder="blank"
-                                                    />
-                                                </Image>
-                                            </a>
-                                            <div className="desc">Created at {data.created_at}</div>
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </CloudinaryContext>
-                   
                     <CardMedia
                       component="img"
                       sx={{
@@ -109,4 +66,6 @@ class Home extends React.Component {
       </ThemeProvider>
     );
   }
-}
+
+
+export default Home;

@@ -16,22 +16,20 @@ namespace BookShop.Controllers
     {
         [Microsoft.AspNetCore.Components.Route("api/[controller]")]
         [ApiController]
-        public class EmployeesController : ControllerBase
+        public class BooksController : ControllerBase
         {
             private readonly IMapper _mapper;
             private readonly IBookService _bookService;
 
-            public EmployeesController(IBookService bookService, IMapper mapper)
+            public BooksController(IBookService bookService, IMapper mapper)
             {
                 _bookService = bookService;
                 _mapper = mapper;
             }
 
-            // GET: api/<EmployeesController>
             [HttpGet]
             public IActionResult Get([FromQuery] FilterOptions filterOptions)
             {
-                // Accessing current request context
                 var query = HttpContext.Request.Query;
 
                 var books = _bookService.GetBooks(filterOptions);
@@ -40,7 +38,6 @@ namespace BookShop.Controllers
                 return Ok(result);
             }
 
-            // GET api/<EmployeesController>/5
             [HttpGet("{id}")]
             public IActionResult Get(int id)
             {
@@ -52,7 +49,6 @@ namespace BookShop.Controllers
                 return Ok(result);
             }
 
-            // POST api/<EmployeesController>
             [HttpPost]
             public IActionResult Post([FromBody] CreateBookDto dto)
             {
@@ -64,7 +60,6 @@ namespace BookShop.Controllers
                 return CreatedAtAction(nameof(Get), new { id = book.Id }, book);
             }
 
-            // PUT api/<EmployeesController>/5
             [HttpPut("{id}")]
             public IActionResult Put(int id, [FromBody] CreateBookDto dto)
             {
@@ -89,4 +84,5 @@ namespace BookShop.Controllers
                 return Ok(result);
             }
         }
+    }
 }

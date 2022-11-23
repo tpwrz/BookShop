@@ -13,8 +13,8 @@ namespace BookShop.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<GenreRef> entity)
         {
-            entity.HasKey(e => e.GenreId)
-                    .HasName("PK__GenreRef__0385057EBACAB50B");
+           // entity.HasKey(e => e.GenreId)
+            //        .HasName("PK__GenreRef__0385057EBACAB50B");
 
             entity.ToTable("GenreRef");
 

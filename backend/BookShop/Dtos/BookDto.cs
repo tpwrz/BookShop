@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace BookShop.Dtos
 {
-    internal class BookDto
+    public class BookDto
     {
-        public int Id { get; set; }
+        public string Isbn { get; set; }
         public string Title { get; set; }
-        //public long Idnp { get; set; }
-        public string Author { get; set; }
-        public string Genre { get; set; }
-        public string Language { get; set; }
+        public int AuthorId { get; set; }
+        public int GenreId { get; set; }
+        public int LanguageId { get; set; }
         public DateOnly ReleaseDate { get; set; }
 
         public decimal Price { get; set; }
-        public bool Available { get; set; }
+        public int Available { get; set; }
     }
 }

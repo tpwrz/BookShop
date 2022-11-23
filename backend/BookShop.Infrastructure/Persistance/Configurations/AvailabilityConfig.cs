@@ -14,8 +14,8 @@ namespace BookShop.Infrastructure.Persistance.Configurations
     
         public void Configure(EntityTypeBuilder<Availability> entity)
         {
-            entity.HasKey(e => e.AvailabilityId)
-                    .HasName("PK__Availabi__DA3979B155081618");
+           // entity.HasKey(e => e.AvailabilityId)
+            //        .HasName("PK__Availabi__DA3979B155081618");
 
             entity.ToTable("AvailabilityRef");
 

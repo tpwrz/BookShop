@@ -17,10 +17,10 @@ namespace BookShop.Dtos
         [Required]
         public string Isbn { get; set; }
         [Required]
-        public string? Author { get; set; }
-        public string? Genre { get; set; }
+        public int? AuthorId { get; set; }
+        public int? GenreId { get; set; }
         [Required]
-        public string? Language { get; set; }
+        public int? LanguageId { get; set; }
         [Required]
         public DateOnly? ReleaseDate { get; set; }
 
@@ -28,7 +28,7 @@ namespace BookShop.Dtos
         [Range(0, 999)]
         public decimal Price { get; set; }
         [Required]
-        public bool Available { get; set; }
+        public int Available { get; set; }
     }
 
 

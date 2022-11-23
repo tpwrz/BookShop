@@ -2,7 +2,7 @@
 using BookShop.Domain.Models;
 using BookShop.Dtos;
 
-internal class BookMappingProfile : Profile
+public class BookMappingProfile : Profile
 {
     public BookMappingProfile()
     {

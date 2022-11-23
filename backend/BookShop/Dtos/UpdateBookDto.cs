@@ -12,15 +12,15 @@ namespace BookShop.Dtos
         [StringLength(128, MinimumLength = 3, ErrorMessage = "Name is too short")]
         public string? Title { get; set; }
 
-        public long? Isbn { get; set; }
+        public string? Isbn { get; set; }
 
-        public string Author { get; set; }
-        public string Genre { get; set; }
-        public string Language { get; set; }
+        public int AuthorId { get; set; }
+        public int GenreId { get; set; }
+        public int LanguageId { get; set; }
         public DateOnly ReleaseDate { get; set; }
 
         [Range(0, 999)]
         public decimal Price { get; set; }
-        public bool Available { get; set; }
+        public int Available { get; set; }
     }
 }

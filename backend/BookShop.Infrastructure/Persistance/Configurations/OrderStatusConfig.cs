@@ -14,8 +14,8 @@ namespace BookShop.Infrastructure.Persistance.Configurations
 
         public void Configure(EntityTypeBuilder<OrderStatus> entity)
         {
-            entity.HasKey(e => e.OrderstatusId)
-                    .HasName("PK__OrderSta__F940B395A07FC836");
+            //entity.HasKey(e => e.OrderstatusId)
+            //        .HasName("PK__OrderSta__F940B395A07FC836");
 
             entity.ToTable("OrderStatusRef");
 

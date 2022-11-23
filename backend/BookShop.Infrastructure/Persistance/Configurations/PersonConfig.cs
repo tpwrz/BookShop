@@ -13,7 +13,7 @@ namespace BookShop.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Person> entity)
         {
-            entity.Property(e => e.PersonId).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedNever();
 
             entity.Property(e => e.Adress)
                 .HasMaxLength(45)
