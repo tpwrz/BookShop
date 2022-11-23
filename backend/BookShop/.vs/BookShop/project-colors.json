@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fd12e9df-c1c6-4e36-ba89-ec1137574e97": {
+      "ProjectGuid": "fd12e9df-c1c6-4e36-ba89-ec1137574e97",
+      "DisplayName": "BookShop",
+      "ColorIndex": 0
+    },
+    "bd905fe1-46f3-4f6e-b05a-3b94b9dc600a": {
+      "ProjectGuid": "bd905fe1-46f3-4f6e-b05a-3b94b9dc600a",
+      "DisplayName": "BookShop.Domain",
+      "ColorIndex": 1
+    },
+    "fbfd5fd4-69b9-4946-9e38-f4620932ec0a": {
+      "ProjectGuid": "fbfd5fd4-69b9-4946-9e38-f4620932ec0a",
+      "DisplayName": "BookShop.Application",
+      "ColorIndex": 2
+    },
+    "f16851fa-7397-4970-816f-dedcd0c32fc3": {
+      "ProjectGuid": "f16851fa-7397-4970-816f-dedcd0c32fc3",
+      "DisplayName": "BookShop.Infrastructure",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "f6066d32-5960-42fd-b8cd-0f617179df22": {
+      "ProjectGuid": "f6066d32-5960-42fd-b8cd-0f617179df22",
+      "DisplayName": "BookShopWeb",
+      "ColorIndex": 4
+    },
+    "3fbf1616-2ac1-4757-876c-5ebaf727f2bc": {
+      "ProjectGuid": "3fbf1616-2ac1-4757-876c-5ebaf727f2bc",
+      "DisplayName": "BookShopWeb",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

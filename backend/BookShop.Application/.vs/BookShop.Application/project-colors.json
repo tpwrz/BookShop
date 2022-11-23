@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "afaba95a-319c-4c9d-97b7-bd66c74af73e": {
+      "ProjectGuid": "afaba95a-319c-4c9d-97b7-bd66c74af73e",
+      "DisplayName": "BookShop.Application",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

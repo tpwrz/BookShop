@@ -1,0 +1,15 @@
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\BookShop.Application.deps.json
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\BookShop.Application.dll
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\ref\BookShop.Application.dll
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\BookShop.Application.pdb
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\BookShop.Domain.dll
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\bin\Debug\net6.0\BookShop.Domain.pdb
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.csproj.AssemblyReference.cache
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.AssemblyInfoInputs.cache
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.AssemblyInfo.cs
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.csproj.CoreCompileInputs.cache
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.csproj.CopyComplete
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.dll
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\ref\BookShop.Application.dll
+D:\GGIT\AMDARIS\PROJECT\BookShop.Application\obj\Debug\net6.0\BookShop.Application.pdb
