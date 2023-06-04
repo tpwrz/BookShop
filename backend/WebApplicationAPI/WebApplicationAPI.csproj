@@ -11,8 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookShop.Infrastructure\BookShop.Infrastructure.csproj" />
-    <ProjectReference Include="..\BookShop\BookShop.csproj" />
+	  <ProjectReference Include="..\BookShop.Infrastructure\BookShop.Infrastructure.csproj" />
+	  <ProjectReference Include="..\BookShop.Application\BookShop.Application.csproj" />
+	  <ProjectReference Include="..\BookShop.Domain\BookShop.Domain.csproj" />
+	  <ProjectReference Include="..\BookShop\BookShop.csproj" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
 </Project>

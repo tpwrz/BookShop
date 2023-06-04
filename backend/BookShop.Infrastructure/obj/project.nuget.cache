@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zClw1LkU4BTgpy7HX8mc0vUz1gNVqicj6d6EuWef9JwbTx9PN+A7OBBCmFAxFDVCqsATkOFTSLewOBI0atYQng==",
+  "dgSpecHash": "GmKg31EnSorFOdp4dwouo0kNQvITT8qy8uKB7K8oN5YzL3+2DLPC1WX99ZdB7e8CRR6ADAVAg6s3PZ/ynU5V5w==",
   "success": true,
-  "projectFilePath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
+  "projectFilePath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tania\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tania\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

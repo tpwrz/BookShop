@@ -2079,11 +2079,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj",
       "projectName": "BookShop.Domain",
-      "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj",
+      "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj",
       "packagesPath": "C:\\Users\\tania\\.nuget\\packages\\",
-      "outputPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\obj\\",
+      "outputPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tania\\AppData\\Roaming\\NuGet\\NuGet.Config",

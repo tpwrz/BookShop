@@ -10,7 +10,7 @@ namespace BookShop.Domain.Models
         {
             Books = new HashSet<Book>();
         }
-        [Key]
+        //[Key]
         //public int AuthorId { get; set; }
         public string FirstName { get; set; } = null!;
         public string? MiddleName { get; set; }

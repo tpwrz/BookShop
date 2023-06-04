@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "karFjp1Xo3NE74Ks6Vb/fK4ZnUtM92BlkNeYAVHRmpJ2idbs1deGpsHnaW3HRdIz3ydML2L8t6EpNM9EEyIB2w==",
+  "dgSpecHash": "ZJYumiYrlVNSR6+JuW2s/2qROUif6ANx0IXS/Uo+w2/k3eI1V5/5+cXIv3VzKD+FHAjaOKGRy2E9RqVdzJO4DA==",
   "success": true,
-  "projectFilePath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
+  "projectFilePath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tania\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tania\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

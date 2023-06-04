@@ -22,7 +22,11 @@ namespace BookShop.Dtos
         [Required]
         public int? LanguageId { get; set; }
         [Required]
-        public DateOnly? ReleaseDate { get; set; }
+        public int? CurrencyId { get; set; }
+        [Required]
+        public int? Pages { get; set; }
+        [Required]
+        public DateTime? ReleaseDate { get; set; }
 
         [Required]
         [Range(0, 999)]

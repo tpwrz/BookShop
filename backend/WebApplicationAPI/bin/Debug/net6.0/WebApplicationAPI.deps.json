@@ -9,6 +9,8 @@
       "WebApplicationAPI/1.0.0": {
         "dependencies": {
           "BookShop": "1.0.0",
+          "BookShop.Application": "1.0.0",
+          "BookShop.Domain": "1.0.0",
           "BookShop.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },

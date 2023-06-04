@@ -5806,6 +5806,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BookShop >= 1.0.0",
+      "BookShop.Application >= 1.0.0",
+      "BookShop.Domain >= 1.0.0",
       "BookShop.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -5816,11 +5818,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
       "projectName": "WebApplicationAPI",
-      "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
+      "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\WebApplicationAPI.csproj",
       "packagesPath": "C:\\Users\\tania\\.nuget\\packages\\",
-      "outputPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\obj\\",
+      "outputPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\WebApplicationAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5837,11 +5839,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj": {
-              "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj"
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj"
             },
-            "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop\\BookShop.csproj": {
-              "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop\\BookShop.csproj"
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj"
+            },
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj"
+            },
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop\\BookShop.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop\\BookShop.csproj"
             }
           }
         }

@@ -2,6 +2,7 @@
 using BookShop.Application.Repositories;
 using BookShop.Domain.Models;
 using BookShop.Infrastructure.Persistance.Repositories;
+using BookShop.Mappings;
 using BookShop.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -22,12 +23,13 @@ namespace WebApplicationAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+           services.AddCors();
 
 
             var mapperConfig = new MapperConfiguration(m =>
             {
                 m.AddProfile(new BookMappingProfile());
+                m.AddProfile(new OrderMappingProfile());
             });
 
             // Global exception filter
@@ -36,12 +38,13 @@ namespace WebApplicationAPI
             services.AddSingleton(mapperConfig.CreateMapper());
             services.AddScoped(typeof(IRepository<>), typeof(EFRepository<>));
             services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IOrderService, OrderService>();
 
 
 
 
             services.AddDbContext<ProjectContext>
-            (opt => opt.UseSqlServer(Configuration.GetConnectionString("StarDanceConnection") ??
+            (opt => opt.UseSqlServer(Configuration.GetConnectionString("DbConnection") ??
                                      throw new InvalidOperationException()));
 
             services.AddControllers()

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BookShop.Application.Repositories;
 using BookShop.Domain;
 using BookShop.Domain.Models;
+using BookShop.Infrastructure.Persistance.Extentions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookShop.Infrastructure.Persistance.Repositories
@@ -71,6 +72,19 @@ namespace BookShop.Infrastructure.Persistance.Repositories
             }
             return entities;
         }
+
+        public async Task<PaginatedResult<TEntity>> GetPagedData(PagedRequest pagedRequest, CancellationToken cancellationToken)
+        {
+            return await _context.Set<TEntity>().CreatePaginatedResult<TEntity>(pagedRequest, cancellationToken);
+        }
+
+        public async Task<PaginatedResult<TEntity>> GetPagedDataWithInclude(PagedRequest pagedRequest, CancellationToken cancellationToken, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            var query = IncludeProperties(includeProperties);
+            return await query.CreatePaginatedResult<TEntity>(pagedRequest, cancellationToken);
+        }
+
+        
     }
 }
 

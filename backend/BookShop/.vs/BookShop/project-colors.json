@@ -35,7 +35,12 @@
       "ProjectGuid": "3fbf1616-2ac1-4757-876c-5ebaf727f2bc",
       "DisplayName": "BookShopWeb",
       "ColorIndex": 5
+    },
+    "42cc21b6-29f7-4f3e-981a-ca7ebb99a082": {
+      "ProjectGuid": "42cc21b6-29f7-4f3e-981a-ca7ebb99a082",
+      "DisplayName": "WebApplicationAPI",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

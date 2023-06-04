@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookShop.Domain.Models
 {
@@ -10,7 +11,7 @@ namespace BookShop.Domain.Models
         public string Title { get; set; } = null!;
         public int AuthorId { get; set; }
         public int GenreId { get; set; }
-        public DateOnly ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
         public int LanguageId { get; set; }
         public int PageNumber { get; set; }
         public decimal Price { get; set; }

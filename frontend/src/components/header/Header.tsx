@@ -74,7 +74,7 @@ export default function Header() {
                     <li><Link href="/" value="Home">Home</Link></li>
                     <li><Link href='signin' value="Sign In">Sign In</Link></li>
                     <li><Link href='' value="Favourites">Favourites</Link></li>
-                    <li><Link href='checkout' value="Shopping Bag">Shopping Bag</Link></li>
+                    <li><Link href='cart' value="Shopping Bag">Shopping Bag</Link></li>
                     <li><a href="settings"><img src={Set} width="25px" /></a></li>
                 </Ul_text>
                 <Ul_icon>
@@ -82,7 +82,7 @@ export default function Header() {
                         <li><a href="/"><HomeOutlinedIcon htmlColor="#0f0f0f" fontSize="medium" /></a></li>
                         <li><a href='signin' ><VpnKeyOutlinedIcon htmlColor="#0f0f0f" fontSize="medium" /></a></li>
                         <li><a href=''><LoyaltyOutlinedIcon htmlColor="#0f0f0f" fontSize="medium" /></a></li>
-                        <li><a href='checkout'><ShoppingBagOutlinedIcon htmlColor="#0f0f0f" fontSize="medium" /></a></li>
+                        <li><a href='cart'><ShoppingBagOutlinedIcon htmlColor="#0f0f0f" fontSize="medium" /></a></li>
                         <li><a href="settings"><img src={Set} width="25px" /></a></li>
                     </ThemeProvider>
                 </Ul_icon>

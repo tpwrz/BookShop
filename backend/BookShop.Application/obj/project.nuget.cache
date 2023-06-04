@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rguu7YufbCxmQ+gimHGohUWX2R14Ea2mOuE8eCHFB1cvT/ei2CYA9WLTyLldS5QJAlXblOnqSARexbZufbintw==",
+  "dgSpecHash": "1ChtrRdsQuoHm3omyx5yRTZl90mqm7MLN4jpXMkdH6hnVCqOADUFsj0kdDbVT+UwtbeeQImB0A4WZRTYEKsqlA==",
   "success": true,
-  "projectFilePath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj",
+  "projectFilePath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tania\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\tania\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

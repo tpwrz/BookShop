@@ -17,7 +17,7 @@ export default function Footer(){
     return <Foot>
             <div >
                 <div>
-                    <Link href='' value="Home"></Link> |
+                    <Link href='/' value="Home"></Link> |
                     <Link href=''value="About us"></Link> |
                     <Link href=''value="Contacts">Contacts</Link>
                 </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route,BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
 import Checkout from "./cart/Checkout";
+import Items from "./cart/Items";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Home from "./home/Home";
@@ -30,6 +31,7 @@ export default function Body() {
                     <Route path="settings" element={<Settings/>} />
                     <Route path="signin" element={<SignIn />} />
                     <Route path="checkout" element={<Checkout />} />
+                    <Route path="cart" element={<Items />} />
                     <Route path="signup" element={<SignUp />} />
                 </Route>
             </Routes>

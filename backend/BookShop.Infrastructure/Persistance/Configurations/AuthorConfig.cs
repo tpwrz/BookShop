@@ -13,7 +13,7 @@ namespace BookShop.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Author> entity)
         {
-          //  entity.Property(e => e.AuthorId).ValueGeneratedNever();
+            entity.Property(e => e.Id).ValueGeneratedNever();
 
             entity.Property(e => e.BirthDate).HasColumnType("date");
 

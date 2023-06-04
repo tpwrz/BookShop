@@ -1,4 +1,5 @@
 ﻿using BookShop.Domain.Models;
+using BookShop.Infrastructure.Persistance.Extentions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,8 @@ namespace BookShop.Application.Repositories
         IQueryable<TEntity> GetAll();
 
         void Save();
+        Task<PaginatedResult<TEntity>> GetPagedData(PagedRequest pagedRequest, CancellationToken cancellationToken);
+
+        Task<PaginatedResult<TEntity>> GetPagedDataWithInclude(PagedRequest pagedRequest, CancellationToken cancellationToken, params Expression<Func<TEntity, object>>[] includeProperties);
     }
 }

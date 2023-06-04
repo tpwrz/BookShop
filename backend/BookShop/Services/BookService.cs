@@ -1,6 +1,8 @@
-﻿using BookShop.Application.Repositories;
+﻿using AutoMapper;
+using BookShop.Application.Repositories;
 using BookShop.Domain.Models;
 using BookShop.Dtos;
+using BookShop.Infrastructure.Persistance.Extentions;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -14,6 +16,7 @@ namespace BookShop.Services
     {
 
         private readonly IRepository<Book> _bookRepository;
+        private readonly IMapper _mapper;
 
         public BookService(IRepository<Book> bookRepository)
         {
@@ -22,7 +25,7 @@ namespace BookShop.Services
 
         public Book AddNewBook(CreateBookDto createBookDto)
         {
-            if (CheckIfIdnpExists(createBookDto.Isbn))
+            if (CheckIfIsbnExists(createBookDto.Isbn))
                 return null;
 
             var book = new Book
@@ -32,7 +35,9 @@ namespace BookShop.Services
                 AuthorId = (int)createBookDto.AuthorId,
                 GenreId = (int)createBookDto.GenreId,
                 LanguageId = (int)createBookDto.LanguageId,
-                ReleaseDate = (DateOnly)createBookDto.ReleaseDate,
+                CurrencyId = (int)createBookDto.CurrencyId,
+                PageNumber = (int)createBookDto.Pages,
+                ReleaseDate = (DateTime)createBookDto.ReleaseDate,
                 Price = createBookDto.Price,
                 AvailabilityId = createBookDto.Available,
             };
@@ -42,9 +47,9 @@ namespace BookShop.Services
             return book;
         }
 
-        private bool CheckIfIdnpExists(string isbn)
+        private bool CheckIfIsbnExists(string isbn)
         {
-            throw new NotImplementedException();
+            return _bookRepository.Find(x => x.Isbn == isbn) != null;
         }
 
         public Book GetBookById(int id)
@@ -99,7 +104,7 @@ namespace BookShop.Services
                 throw new Exception("Employee not found!");
 
             }
-            else if (dto.Isbn != book.Isbn && CheckIfIdnpExists(dto.Isbn))
+            else if (dto.Isbn != book.Isbn && CheckIfIsbnExists(dto.Isbn))
                 return null;
 
             book.Isbn = dto.Isbn;
@@ -107,7 +112,9 @@ namespace BookShop.Services
             book.AuthorId = (int)dto.AuthorId;
             book.GenreId = (int)dto.GenreId;
             book.LanguageId = (int)dto.LanguageId;
-            book.ReleaseDate = (DateOnly)dto.ReleaseDate;
+            book.CurrencyId = (int)dto.CurrencyId;
+            book.PageNumber = (int)dto.Pages;
+            book.ReleaseDate = (DateTime)dto.ReleaseDate;
             book.Price = dto.Price;
             book.AvailabilityId = dto.Available;
 
@@ -129,7 +136,7 @@ namespace BookShop.Services
 
             if ( book.Isbn != dto.Isbn)
             {
-                if (CheckIfIdnpExists(dto.Isbn))
+                if (CheckIfIsbnExists(dto.Isbn))
                 {
                     throw new Exception("Another user with such IDNP already exists in the system!");
                 }
@@ -145,9 +152,23 @@ namespace BookShop.Services
             return book;
         }
 
-        private bool CheckIfIdnpExist(string isbn)
+        public async Task<PaginatedResult<BookDto>> GetPagedResult(PagedRequest pagedRequest, CancellationToken cancellationToken)
         {
-            return _bookRepository.Find(x => x.Isbn == isbn) != null;
+            var bookList = await _bookRepository.GetPagedDataWithInclude(pagedRequest, cancellationToken,
+                x => x.Isbn,
+                x => x.Title,
+                x => x.AuthorId,
+                x => x.GenreId,
+                x => x.LanguageId,
+                x => x.CurrencyId,
+                x => x.PageNumber,
+                x => x.ReleaseDate,
+                x => x.AvailabilityId,
+                x => x.Price);
+            var list = _mapper.Map<PaginatedResult<BookDto>>(bookList);
+            return list;
         }
+
+       
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BookShop.Domain.Models;
 using BookShop.Dtos;
+using BookShop.Infrastructure.Persistance.Extentions;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
 using System;
 using System.Collections.Generic;
@@ -22,5 +23,6 @@ namespace BookShop.Services
         Book UpdateBook(int id, CreateBookDto dto);
 
         bool RemoveBookById(int id);
+        Task<PaginatedResult<BookDto>> GetPagedResult(PagedRequest pagedRequest, CancellationToken cancellationToken);
     }
 }

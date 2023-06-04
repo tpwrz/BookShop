@@ -17,7 +17,9 @@ namespace BookShop.Dtos
         public int AuthorId { get; set; }
         public int GenreId { get; set; }
         public int LanguageId { get; set; }
-        public DateOnly ReleaseDate { get; set; }
+        public int CurrencyId { get; set; }
+        public int Pages { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
         [Range(0, 999)]
         public decimal Price { get; set; }

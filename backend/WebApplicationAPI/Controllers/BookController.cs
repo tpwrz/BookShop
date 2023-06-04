@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using BookShop.Services;
 using BookShop.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using BookShop.Application.Repositories;
+using BookShop.Infrastructure.Persistance.Extentions;
 
 namespace BookShop.Controllers
 {
@@ -82,6 +84,13 @@ namespace BookShop.Controllers
                 var result = _mapper.Map<BookDto>(employee);
                 return Ok(result);
             }
+
+        [HttpPost("paginated")]
+        public async Task<PaginatedResult<BookDto>> GetPaginatedLessons(PagedRequest pagedRequest, CancellationToken cancellationToken)
+        {
+            var lessonReadDtos = await _bookService.GetPagedResult(pagedRequest, cancellationToken);
+            return lessonReadDtos;
         }
+    }
     }
 

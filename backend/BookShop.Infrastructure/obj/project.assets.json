@@ -2108,11 +2108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
       "projectName": "BookShop.Infrastructure",
-      "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
+      "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\BookShop.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\tania\\.nuget\\packages\\",
-      "outputPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\obj\\",
+      "outputPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tania\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2129,11 +2129,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj": {
-              "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj"
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Application\\BookShop.Application.csproj"
             },
-            "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj": {
-              "projectPath": "D:\\GGIT\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj"
+            "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj": {
+              "projectPath": "D:\\PROJECTS\\AMDARIS\\BookShopProject\\backend\\BookShop.Domain\\BookShop.Domain.csproj"
             }
           }
         }
